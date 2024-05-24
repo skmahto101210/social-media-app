@@ -13,7 +13,7 @@ const FriendListWidget = ({ userId }) => {
 
   const getFriends = async () => {
     const response = await fetch(
-      `${window.location.origin}/users/${userId}/friends`,
+      `https://social-media-app-2-2wuk.onrender.com/users/${userId}/friends`,
       {
         method: "GET",
         headers: { Authorization: `Bearer ${token}` },
