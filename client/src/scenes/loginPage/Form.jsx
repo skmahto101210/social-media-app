@@ -64,7 +64,7 @@ const Form = () => {
     formData.append("picturePath", values.picture.name);
 
     const savedUserResponse = await fetch(
-      `https://social-media-app-2-2wuk.onrender.com/auth/register`,
+      `https://social-media-app-server-gylg.onrender.com/auth/register`,
       {
         method: "POST",
         body: formData,
@@ -80,7 +80,7 @@ const Form = () => {
 
   const login = async (values, onSubmitProps) => {
     const loggedInResponse = await fetch(
-      `https://social-media-app-2-2wuk.onrender.com/auth/login`,
+      `https://social-media-app-server-gylg.onrender.com/auth/login`,
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
