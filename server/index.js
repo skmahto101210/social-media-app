@@ -50,10 +50,9 @@ const PORT = process.env.PORT || 6001;
 mongoose
   .connect(process.env.MONGO_URL)
   .then(() => {
-    // app.get("/", (req, res) => {
-    //   app.use(express.static(path.resolve(__dirname, "build")));
-    //   res.sendFile(path.resolve(__dirname, "build", "index.html"));
-    // });
+      app.get("/", (req, res) => {
+      res.send("API is running");
+    });
     app.listen(PORT, () => {
       console.log(`server Port: ${PORT}`);
     });
